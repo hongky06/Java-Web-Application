@@ -1,0 +1,25 @@
+## Phân tích cách truyền tham số trong URL
+
+### Cách A
+URL:
+`/bai3/orders/5`
+
+Trong trường hợp này, **số 5 nằm trong URI Path (đường dẫn của URL)**.
+Nó đại diện cho **ID của một tài nguyên cụ thể** (đơn hàng có ID = 5).
+Cách này thường được sử dụng với annotation `@PathVariable`.
+
+### Cách B
+URL:
+`/bai3/orders?id=5`
+
+Trong trường hợp này, **số 5 nằm trong Query String (chuỗi truy vấn)**.
+`id` là tên tham số và `5` là giá trị của tham số.
+Cách này thường được sử dụng với annotation `@RequestParam`.
+
+---
+
+### Kết luận
+Để lấy **ID của một đối tượng cụ thể**, cách phù hợp hơn là **Cách A** vì ID là một phần của đường dẫn tài nguyên.
+Do đó, nên sử dụng **`@PathVariable`**.
+
+**Lựa chọn:** Cách A (`/bai3/orders/5`).
